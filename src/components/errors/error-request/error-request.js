@@ -1,16 +1,16 @@
 import { Alert } from 'antd';
-import './error-data.css';
+import './error-request.css';
 
-function ErrorData() {
+function ErrorRequest() {
   return (
     <Alert
-      className='error-data'
+      className='error-request'
       message='Error'
       showIcon
-      description='Failed to load data. Please, try later.'
+      description='Failed to find movies. Please, try another name.'
       type='error'
     />
   );
 }
 
-export default ErrorData;
+export default ErrorRequest;

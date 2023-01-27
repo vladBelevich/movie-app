@@ -1,3 +1,3 @@
-import SearchContent from './search-content';
+import RatedContent from './rated-content';
 
-export default SearchContent;
+export default RatedContent;

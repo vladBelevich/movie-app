@@ -1,0 +1,15 @@
+.container {
+  max-width: 970px;
+  background: #ffffff;
+  margin: 13px auto;
+  padding: 0 16px;
+}
+.ant-layout {
+  background: white;
+}
+.ant-layout .ant-layout-footer {
+  background: white;
+}
+.ant-layout .ant-layout-header {
+  background-color: white;
+}

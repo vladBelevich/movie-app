@@ -1,0 +1,166 @@
+.card {
+  height: 281px;
+  width: 454px;
+  display: flex;
+  margin-bottom: 35px;
+}
+.card-image {
+  width: 183px;
+  height: 281px;
+  margin-right: 20px;
+}
+.card-image img {
+  width: 183px;
+  height: 281px;
+  object-fit: cover;
+}
+.card-info {
+}
+.title-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  min-height: 66px;
+}
+.title-text {
+  margin-right: 25px;
+}
+.title-text h3 {
+  font-family: Inter UI, serif;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  text-align: left;
+}
+.title-grade {
+  padding: 6px;
+  margin-right: 9px;
+  position: relative;
+}
+.title-grade {
+  display: block;
+}
+.title-grade::before {
+  position: absolute;
+  content: '';
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 15px;
+  top: 0;
+  left: -2px;
+}
+.grade-bad.title-grade::before {
+  border-color: #e90000;
+}
+.grade-normal.title-grade::before {
+  border-color: #e97e00;
+}
+.grade-good.title-grade::before {
+  border-color: #e9d100;
+}
+.grade-excellent.title-grade::before {
+  border-color: #66e900;
+}
+.card-date {
+  margin-bottom: 9px;
+}
+.card-date span {
+  font-family: Inter UI, serif;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #827e7e;
+}
+.card-genres {
+  display: flex;
+  margin-bottom: 7px;
+  flex-wrap: wrap;
+}
+.card-genre {
+  padding: 2px;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.card-overview {
+  padding-right: 20px;
+  height: 85px;
+}
+.card-overview span {
+  font-family: Inter UI, serif;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0;
+  text-align: left;
+}
+
+
+
+.card_mobile {
+  width: 387px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.card-info_mobile {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.card-image_mobile {
+  margin-right: 13px;
+}
+.card-image_mobile img {
+  width: 60px;
+  height: 91px;
+  object-fit: cover;
+}
+.card-description_mobile {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.title-container_mobile {
+  display: flex;
+  justify-content: space-between;
+}
+.title-text_mobile {
+}
+.title-grade_mobile {
+  position: relative;
+  margin-left: 50px;
+}
+.card-genres_mobile {
+  display: flex;
+}
+.title-grade_mobile::before {
+  position: absolute;
+  content: '';
+  border: 2px solid;
+  border-radius: 50%;
+  padding: 15px;
+  top: -5px;
+  left: -7px;
+}
+.grade-bad.title-grade_mobile::before {
+  border-color: #e90000;
+}
+.grade-normal.title-grade_mobile::before {
+  border-color: #e97e00;
+}
+.grade-good.title-grade_mobile::before {
+  border-color: #e9d100;
+}
+.grade-excellent.title-grade_mobile::before {
+  border-color: #66e900;
+}
+.card-date_mobile {
+  margin-bottom: 9px;
+}
+.card-date_mobile span {
+  margin-bottom: 9px;
+}
+.card-overview_mobile {
+  height: 85px;
+}

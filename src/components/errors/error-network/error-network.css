@@ -1,0 +1,11 @@
+.error-network {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.error-network__modal {
+  position: fixed;
+  width: 300px;
+}

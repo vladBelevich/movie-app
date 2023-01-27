@@ -6,36 +6,32 @@ import './search-content.css';
 
 function SearchContent({
   setPage,
-  totalResults,
-  currentPage,
-  data,
-  loading,
-  errorData,
-  noResults,
+  dataSearch,
   onChangeSearch,
-  addRatedItem,
   guestID,
+  innerWidth,
 }) {
   const { Content } = Layout;
   const hide = true;
   const responsive = true;
+
   return (
     <Content>
       <Search onChangeSearch={onChangeSearch} />
       <CardList
-        data={data}
-        loading={loading}
-        errorData={errorData}
-        noResults={noResults}
-        addRatedItem={addRatedItem}
+        innerWidth={innerWidth}
+        data={dataSearch.dataLoadedSearched}
+        loading={dataSearch.loading}
+        errorData={dataSearch.errorData}
+        noResults={dataSearch.noResults}
         guestID={guestID}
       />
       <Row className='pagination-wrapper' justify='center'>
         <Pagination
           hideOnSinglePage={hide}
-          total={totalResults}
+          total={dataSearch.totalResults}
           onChange={setPage}
-          current={currentPage}
+          current={dataSearch.page}
           responsive={responsive}
           defaultPageSize={20}
         />

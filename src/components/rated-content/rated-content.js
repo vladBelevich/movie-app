@@ -1,47 +1,42 @@
-import Search from '../search';
 import CardList from '../card-list';
 import { Layout, Row, Pagination } from 'antd';
 
-import './search-content.css';
+import './rated-content.css';
+import { Component } from 'react';
 
-function SearchContent({
-  setPage,
-  totalResults,
-  currentPage,
-  data,
-  loading,
-  errorData,
-  noResults,
-  onChangeSearch,
-  addRatedItem,
-  guestID,
-}) {
-  const { Content } = Layout;
-  const hide = true;
-  const responsive = true;
-  return (
-    <Content>
-      <Search onChangeSearch={onChangeSearch} />
-      <CardList
-        data={data}
-        loading={loading}
-        errorData={errorData}
-        noResults={noResults}
-        addRatedItem={addRatedItem}
-        guestID={guestID}
-      />
-      <Row className='pagination-wrapper' justify='center'>
-        <Pagination
-          hideOnSinglePage={hide}
-          total={totalResults}
-          onChange={setPage}
-          current={currentPage}
-          responsive={responsive}
-          defaultPageSize={20}
+export default class RatedContent extends Component {
+  state = {};
+
+  render() {
+    const { dataRated, guestID, setPage, innerWidth } = this.props;
+
+    const { Content } = Layout;
+    const hide = true;
+    const responsive = true;
+
+    console.log(dataRated);
+
+    return (
+      <Content>
+        <CardList
+          data={dataRated.dataLoadedRated}
+          loading={dataRated.loading}
+          errorData={dataRated.errorData}
+          noResults={dataRated.noResults}
+          guestID={guestID}
+          innerWidth={innerWidth}
         />
-      </Row>
-    </Content>
-  );
+        <Row className='pagination-wrapper' justify='center'>
+          <Pagination
+            hideOnSinglePage={hide}
+            total={dataRated.totalResults}
+            onChange={setPage}
+            current={dataRated.page}
+            responsive={responsive}
+            defaultPageSize={20}
+          />
+        </Row>
+      </Content>
+    );
+  }
 }
-
-export default SearchContent;

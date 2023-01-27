@@ -1,3 +1,3 @@
-import ErrorData from './error-data';
+import ErrorRequest from './error-request';
 
-export default ErrorData;
+export default ErrorRequest;
