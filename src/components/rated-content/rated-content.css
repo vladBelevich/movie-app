@@ -1,0 +1,7 @@
+.pagination-wrapper {
+  margin-top: 20px;
+}
+
+.pagination-wrapper .ant-pagination-options {
+  display: none;
+}
