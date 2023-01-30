@@ -14,8 +14,6 @@ export default class RatedContent extends Component {
     const hide = true;
     const responsive = true;
 
-    console.log(dataRated);
-
     return (
       <Content>
         <CardList

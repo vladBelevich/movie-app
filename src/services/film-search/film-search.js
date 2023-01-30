@@ -1,8 +1,6 @@
 export default class FilmSearch {
   apiBase = 'https://api.themoviedb.org/3';
 
-  apiKey = 'api_key=9798ba2b63905bd2cfcb37563bd3ad01';
-
   async getResource(url) {
     const res = await fetch(`${this.apiBase}${url}`);
     if (!res.ok) {
@@ -13,21 +11,25 @@ export default class FilmSearch {
 
   async getMoviesSearch(query, page = 1) {
     return this.getResource(
-      `/search/movie?${this.apiKey}&query=${query}&page=${page}`
+      `/search/movie?api_key=${process.env.REACT_APP_API_KEY}&query=${query}&page=${page}`
     );
   }
 
   async getGenres() {
-    return this.getResource(`/genre/movie/list?${this.apiKey}`);
+    return this.getResource(
+      `/genre/movie/list?api_key=${process.env.REACT_APP_API_KEY}`
+    );
   }
 
   async getGuestSession() {
-    return this.getResource(`/authentication/guest_session/new?${this.apiKey}`);
+    return this.getResource(
+      `/authentication/guest_session/new?api_key=${process.env.REACT_APP_API_KEY}`
+    );
   }
 
   async rateFilm(guestSessionId, movieId, rateValue) {
     await fetch(
-      `${this.apiBase}/movie/${movieId}/rating?${this.apiKey}&guest_session_id=${guestSessionId}`,
+      `${this.apiBase}/movie/${movieId}/rating?api_key=${process.env.REACT_APP_API_KEY}&guest_session_id=${guestSessionId}`,
       {
         method: 'POST',
         headers: { 'Content-Type': 'application/json;charset=utf-8' },
